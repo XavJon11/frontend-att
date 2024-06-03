@@ -1,0 +1,54 @@
+.cadastro-container-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.cadastro-container form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    /* Largura do formulário */
+}
+
+.cadastro-container input {
+    padding: 20px;
+    margin-bottom: 10px;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.BLogin {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: solid 2px #000000;
+    border-radius: 10px;
+    background-color: #022353;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+}
+
+.BLogin:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.p-login {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-options {
+    display: flex;
+}
+
+.login-options p {
+    margin-top: 20px;
+    padding-right: 300px;
+}

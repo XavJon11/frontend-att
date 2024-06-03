@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+header {
+  position: relative; /* Certifique-se de que o header esteja posicionado corretamente */
+  z-index: 10; /* Um valor alto o suficiente para estar acima dos cartões */
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(250, 249, 249); /* Adicione uma cor de fundo para o cabeçalho se necessário */
+  box-shadow: 0 2px 5px rgba(59, 59, 59, 0.1); /* Adicione uma sombra se desejar */
+ 
+}
+.logo {
+  margin-left: 100px; /* Ajuste a margem conforme necessário para posicionar a logo */
+}
+
+.logo img {
+  width: 100px; /* ajuste o tamanho conforme necessário */
+}
+  .menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    
+  }
+  
+  .menu ul li {
+    margin-left: 50px; /* ajuste a margem conforme necessário */
+    margin-right: 50px;
+    font-size: 25px;
+    
+  
+    
+  }
+  
+  .menu ul li:first-child {
+    margin-left: -10%;
+    
+  }
+  
+  .link {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-family: 'Roboto Condensed', sans-serif; /* Aplica a fonte ao container do header */
+   
+  }
+  
+  .link:hover {
+    text-decoration: none;
+    color: orange;
+   
+  }
+
+  @media screen and (max-width: 768px) {
+    .logo img {
+      width: 60px; /* ajuste o tamanho conforme necessário para telas menores */
+      margin-left: 20px; /* ajuste a margem conforme necessário para telas menores */
+    }
+    
+    .menu {
+      margin-right: 30px; /* ajuste a margem conforme necessário para telas menores */
+    }
+    
+    .menu ul li {
+      margin-left: 30px; /* ajuste a margem conforme necessário para telas menores */
+    }
+  }
+
+  /* Media query para telas maiores que 1444px */
+@media screen and (min-width: 1445px) {
+  .header-container {
+    padding: 0 10%; /* Adapta o espaçamento interno para telas maiores */
+  }
+
+  .menu ul li {
+    margin-left: 100px; /* Ajusta a margem dos itens do menu para telas maiores */
+    margin-right: 100px;
+    font-size: 25px; /* Ajusta o tamanho da fonte para telas maiores */
+  }
+}

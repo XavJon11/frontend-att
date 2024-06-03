@@ -1,0 +1,41 @@
+/* src/pages/AgendarMentor/AgendarMentor.css 
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap');
+
+.mentor-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mentor-container h2 {
+  color: #000000;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-family: 'Lobster', cursive;
+}
+.mentor-cards {
+  display: flex;
+  justify-content: center; /* Alinhando os cards ao centro horizontalmente 
+  gap: 20px;/* Espaço entre os cards 
+  
+}
+
+.mentor-card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+
+}
+
+.mentor-card img {
+  width: 100%;
+    height: auto;
+}
+
+*/
