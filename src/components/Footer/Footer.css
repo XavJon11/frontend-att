@@ -26,7 +26,7 @@ footer {
 @media screen and (max-width: 1444px) {
   footer {
     font-size: 16px; /* Ajusta o tamanho da fonte para monitores de 1444px */
-    padding: 25px 0; /* Ajusta o padding */
+    padding: 20px 0; /* Ajusta o padding */
   }
 }
   

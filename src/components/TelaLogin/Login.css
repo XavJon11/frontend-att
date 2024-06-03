@@ -1,54 +1,69 @@
-.cadastro-container-container {
+/* Login.css */
+.login-page {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
+    align-items: center;
+    height: 100vh;
+    background: url('../../assets/imgs/Blue\ Minimalist\ Linktree\ Background.png') no-repeat center center fixed;
+    background-size: cover;
+  }
 
-.cadastro-container form {
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    /* Largura do formulário */
-}
-
-.cadastro-container input {
+  .cadastro-container {
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    margin-bottom: 10px;
-    border: 1px solid #000000;
-    border-radius: 10px;
-}
-
-.BLogin {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding: 10px;
-    font-size: 16px;
-    border: solid 2px #000000;
-    border-radius: 10px;
-    background-color: #022353;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-    display: block;
-    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-}
-
-.BLogin:hover {
-    background-color: #000000;
+    width: 300px;
+  }
+  
+  .cadastro-container img {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .h1Cadastro {
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  .cadastro-container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000000;
+    border-radius: 4px;
+  }
+  
+  .p-login {
+    margin: 10px 0;
+  }
+  
+  .p-login p {
+    margin: 0;
+  }
+  
+  .p-login a {
+    color: #007BFF;
+    text-decoration: none;
+  }
+  
+  .p-login a:hover {
+    text-decoration: underline;
+  }
+  
+  .BLogin {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #007BFF;
     color: #ffffff;
-}
-
-.p-login {
-    display: flex;
-    flex-direction: column;
-}
-
-.login-options {
-    display: flex;
-}
-
-.login-options p {
-    margin-top: 20px;
-    padding-right: 300px;
-}
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+  }
+  
+  .BLogin:hover {
+    background-color: #0056b3;
+  }
+  

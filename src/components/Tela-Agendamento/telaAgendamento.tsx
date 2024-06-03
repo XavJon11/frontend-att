@@ -14,6 +14,8 @@ const AgendaMentor: React.FC = () => {
 
   const handleMentorSelection = (mentorName: string) => {
     setSelectedMentor(mentorName);
+    setMentoriaAgendada(false);
+
   };
 
   const handleHourSelection = (hour: string) => {
@@ -25,20 +27,22 @@ const AgendaMentor: React.FC = () => {
   const handleAgendarMentoria = async () => {
     try {
       // Suponha que você tenha uma API para agendar mentoria com um endpoint '/agendar-mentoria'
-      const response = await fetch('http://localhost:8080/api/agendar-mentoria', {
+      const response = await fetch('http://localhost:8080/mentoria/agendar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           mentor: selectedMentor,
+          hour: selectedHour,
           // Outros dados relevantes para a mentoria podem ser incluídos aqui
         }),
       });
 
       // Verifica se a solicitação foi bem-sucedida
       if (response.ok) {
-        // Define o estado para indicar que a mentoria foi agendada com sucesso
+        alert(`Sua mentoria com ${selectedMentor} foi agendada com sucesso!`);
+        setSelectedMentor(null); // Limpa o mentor selecionado
         setMentoriaAgendada(true);
       } else {
         // Se a solicitação falhar, mostra uma mensagem de erro
@@ -48,11 +52,10 @@ const AgendaMentor: React.FC = () => {
       // Se ocorrer algum erro durante a solicitação, mostra uma mensagem de erro
       console.error('Erro ao agendar a mentoria:', error);
     }
-
-    if (mentoriaAgendada) {
-      return <Navigate to="/" />;
-    }
   };
+  if (mentoriaAgendada) {
+    return <Navigate to="/" />;
+  }
 
   return (
     <div className="mentor-container">
@@ -88,7 +91,7 @@ const AgendaMentor: React.FC = () => {
       </div>
 
       {/* Select de Horas */}
-      {selectedMentor && !mentoriaAgendada && (
+      {selectedMentor && (
         <div className="hour-select">
           <label htmlFor="hour-select">Selecione um horário:</label>
           <select id="hour-select" value={selectedHour} onChange={(e) => handleHourSelection(e.target.value)}>
@@ -96,7 +99,7 @@ const AgendaMentor: React.FC = () => {
             <option value="08:00">08:00</option>
             <option value="09:00">09:00</option>
             <option value="10:00">10:00</option>
-            <option value="10:00">11:00</option>
+            <option value="11:00">11:00</option>
             {/* Adicione mais opções de horário conforme necessário */}
           </select>
         </div>
@@ -107,11 +110,6 @@ const AgendaMentor: React.FC = () => {
         <button className="agendar-button" onClick={handleAgendarMentoria}>
           Agendar com {selectedMentor}
         </button>
-      )}
-
-      {/* Mensagem de sucesso após agendar */}
-      {mentoriaAgendada && (
-        <p>Sua mentoria com {selectedMentor} foi agendada com sucesso!</p>
       )}
     </div>
   );

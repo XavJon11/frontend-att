@@ -4,6 +4,7 @@ import Home from './pages/Home/HomePage';
 import MentorPage from './pages/AgendarMentor/AgendarMentor';
 import AnamnesePage from './pages/Anamnese/AnamnesePage';
 import AgendamentoPage from './pages/Agendamento/AgendamentoPage';
+import LoginPage from './pages/TelaLogin/Login';
 
 
 
@@ -15,6 +16,7 @@ const App: React.FC = () => {
         <Route path="/mentor" element={<MentorPage />} />
         <Route path="/anamnese" element={<AnamnesePage />} />
         <Route path="/agendamento" element={<AgendamentoPage/>} />
+        <Route path="/login" element={<LoginPage/>} />
       </Routes>
     </Router>
   );

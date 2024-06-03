@@ -13,18 +13,17 @@ const TelaLogin: React.FC = () => {
   };
 
   return (
+    <div className="login-page">
     <div className="cadastro-container">
-      <img src={require('../../assets/imgs/logo_ra.png')} alt="Logo" />
+      <img src={require('../../assets/imgs/logo_ra1.png')} alt="Logo" />
       <h1 className="h1Cadastro"> Login </h1>
       <form onSubmit={handleLogin}>
-
         <input
           type="text"
           placeholder="CNPJ"
           value={cnpj}
           onChange={(e) => setCnpj(e.target.value)}
         />
-
         <input
           type="password"
           placeholder="Senha"
@@ -35,13 +34,10 @@ const TelaLogin: React.FC = () => {
         <div className='p-login'>
           <p><Link to="/esquecisenha">Esqueceu a senha?</Link></p>
         </div>
-
-        <Link to="/usuario" className="BLogin" type="submit">
-          Fazer Login
-        </Link>
+        <button type="submit" className="BLogin">Fazer Login</button>
       </form>
     </div>
-
+  </div>
   );
 };
 

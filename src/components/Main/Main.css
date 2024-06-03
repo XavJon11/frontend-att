@@ -92,7 +92,7 @@ body {
   gap: 150px; /* Reduzido de 400px para 40px */
   margin-top: 40px; /* Reduzido de 80px para 40px */
   margin-bottom: 40px; /* Reduzido de 80px para 40px */
-  padding-left:600px; /* Removido padding-left */
+  padding-left:800px; /* Removido padding-left */
 }
 
 .botaoMain {
@@ -155,6 +155,7 @@ body {
     flex-direction: column;
     gap: 10px;
     margin-top: 20px;
+
   }
   
   .botaoMain {
@@ -211,6 +212,6 @@ body {
   }
   
   .bloco {
-    margin-left: 240px;
+    margin-left: 200px;
   }
 }
