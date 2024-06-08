@@ -1,4 +1,5 @@
-/* Login.css */
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+
 .login-page {
     display: flex;
     justify-content: center;
@@ -25,6 +26,7 @@
   .h1Cadastro {
     margin-bottom: 20px;
     color: #000000;
+    font-family: "Fjalla One", sans-serif;
   }
   
   .cadastro-container input {
@@ -35,22 +37,6 @@
     border-radius: 4px;
   }
   
-  .p-login {
-    margin: 10px 0;
-  }
-  
-  .p-login p {
-    margin: 0;
-  }
-  
-  .p-login a {
-    color: #007BFF;
-    text-decoration: none;
-  }
-  
-  .p-login a:hover {
-    text-decoration: underline;
-  }
   
   .BLogin {
     display: inline-block;

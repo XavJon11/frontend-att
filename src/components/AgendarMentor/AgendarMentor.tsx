@@ -4,6 +4,9 @@ import mentor1 from '../../assets/imgs/mentor1.png';
 import mentor2 from '../../assets/imgs/mentor2.jpg';
 import mentor3 from '../../assets/imgs/mentor3.jpg';
 import '../Tela-Agendamento/telaAgendamento.css';
+
+
+
 const Mentor: React.FC = () => {
   
   return (

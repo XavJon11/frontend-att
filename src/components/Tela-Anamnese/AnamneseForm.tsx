@@ -61,7 +61,6 @@ const AnamneseForm: React.FC = () => {
     const formIsValid = Object.values(formData).every(value => value !== '');
 
     if (formIsValid) {
-      console.log('Dados Salvos', formData);
 
       fetch('http://localhost:8080/agressor/cadastro', {
         method: 'POST',
@@ -73,7 +72,8 @@ const AnamneseForm: React.FC = () => {
         .then(response => response.json())
         .then(data => {
           console.log('Success:', data);
-          navigate('/agendamento', { state: { formData: data } });
+          navigate('/agendamento', { state: { formData: data , agressorNome: formData.nome, agressorContato: formData.contato} });
+          localStorage.setItem('userData', JSON.stringify(formData));
         })
         .catch(error => {
           console.error('Error:', error.message || 'Failed to fetch');

@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+.instituicao-container {
+  padding: 20px;
+}
+.instituicao-container h2{
+  margin-bottom: 20px;
+  font-family: "Oswald", sans-serif;
+}
+
+.instituicao-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.instituicao-imagem {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+}
+
+.instituicao-mensagem {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.mentoria-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.mentoria-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.mentoria-item p {
+  margin: 5px 0;
+  
+}
+
+.mentoria-item strong {
+  color: #000000;
+}
+
+/* TelaIES.css */
+
+.mentoria-item.aceitou {
+  background-color: lightgreen;
+}
+
+.mentoria-item.recusou {
+  background-color: lightcoral;
+}
+
+.acao-mentoria button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+ 
+}
+
+.acao-mentoria button.ok {
+  background-color: #00356d;
+  color: white;
+}
+
+.acao-mentoria button:hover {
+  background-color: #256bc7;
+}
+
+
+.instituicao-header button.off{
+  background-color: rgb(230, 97, 97);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.instituicao-header button.off:hover {
+  background-color: rgb(255, 0, 0);
+}
+
+

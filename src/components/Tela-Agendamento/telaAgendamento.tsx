@@ -1,5 +1,4 @@
-// MentorPage.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navigate } from 'react-router-dom';
 import mentor1 from '../../assets/imgs/mentor1.png';
 import mentor2 from '../../assets/imgs/mentor2.jpg';
@@ -10,23 +9,30 @@ const AgendaMentor: React.FC = () => {
   const [selectedMentor, setSelectedMentor] = useState<string | null>(null);
   const [mentoriaAgendada, setMentoriaAgendada] = useState<boolean>(false);
   const [selectedHour, setSelectedHour] = useState<string>('');
+  const [agressorContato, setAgressorContato] = useState<string>('');
+  const [agressorNome, setAgressorNome] = useState<string>('');
 
 
+  useEffect(() => {
+    // Recuperar os dados do usuário do armazenamento local
+    const userData = localStorage.getItem('userData');
+    if (userData) {
+      const { nome, contato } = JSON.parse(userData);
+      setAgressorNome(nome);
+      setAgressorContato(contato);
+    }
+  }, []);
   const handleMentorSelection = (mentorName: string) => {
     setSelectedMentor(mentorName);
     setMentoriaAgendada(false);
-
   };
 
   const handleHourSelection = (hour: string) => {
     setSelectedHour(hour);
-
-  }
-
+  };
 
   const handleAgendarMentoria = async () => {
     try {
-      // Suponha que você tenha uma API para agendar mentoria com um endpoint '/agendar-mentoria'
       const response = await fetch('http://localhost:8080/mentoria/agendar', {
         method: 'POST',
         headers: {
@@ -35,24 +41,23 @@ const AgendaMentor: React.FC = () => {
         body: JSON.stringify({
           mentor: selectedMentor,
           hour: selectedHour,
-          // Outros dados relevantes para a mentoria podem ser incluídos aqui
+          agressorContato: agressorContato,
+          agressorNome: agressorNome,
         }),
       });
 
-      // Verifica se a solicitação foi bem-sucedida
       if (response.ok) {
         alert(`Sua mentoria com ${selectedMentor} foi agendada com sucesso!`);
-        setSelectedMentor(null); // Limpa o mentor selecionado
+        setSelectedMentor(null);
         setMentoriaAgendada(true);
       } else {
-        // Se a solicitação falhar, mostra uma mensagem de erro
         console.error('Falha ao agendar a mentoria.');
       }
     } catch (error) {
-      // Se ocorrer algum erro durante a solicitação, mostra uma mensagem de erro
       console.error('Erro ao agendar a mentoria:', error);
     }
   };
+
   if (mentoriaAgendada) {
     return <Navigate to="/" />;
   }
@@ -62,7 +67,6 @@ const AgendaMentor: React.FC = () => {
       <h2>Nossos Mentores</h2>
 
       <div className="mentor-cards">
-        {/* Card de Mentor 1 */}
         <div className="mentor-card" onClick={() => handleMentorSelection("Deangellis Berg")}>
           <img src={mentor1} alt="Mentor 1" />
           <div className="mentor-info">
@@ -71,7 +75,6 @@ const AgendaMentor: React.FC = () => {
           </div>
         </div>
 
-        {/* Card de Mentor 2 */}
         <div className="mentor-card" onClick={() => handleMentorSelection("Arnaldo Willian")}>
           <img src={mentor2} alt="Mentor 2" />
           <div className="mentor-info">
@@ -80,7 +83,6 @@ const AgendaMentor: React.FC = () => {
           </div>
         </div>
 
-        {/* Card de Mentor 3 */}
         <div className="mentor-card" onClick={() => handleMentorSelection("Jonathas Xavier")}>
           <img src={mentor3} alt="Mentor 3" />
           <div className="mentor-info">
@@ -90,29 +92,29 @@ const AgendaMentor: React.FC = () => {
         </div>
       </div>
 
-      {/* Select de Horas */}
       {selectedMentor && (
-        <div className="hour-select">
-          <label htmlFor="hour-select">Selecione um horário:</label>
-          <select id="hour-select" value={selectedHour} onChange={(e) => handleHourSelection(e.target.value)}>
-            <option value="">Selecione</option>
-            <option value="08:00">08:00</option>
-            <option value="09:00">09:00</option>
-            <option value="10:00">10:00</option>
-            <option value="11:00">11:00</option>
-            {/* Adicione mais opções de horário conforme necessário */}
-          </select>
+        <div className="agendamento-form">
+          <div className="hour-select">
+            <label htmlFor="hour-select">Selecione um horário:</label>
+            <select id="hour-select" value={selectedHour} onChange={(e) => handleHourSelection(e.target.value)}>
+              <option value="">Selecione</option>
+              <option value="08:00">08:00</option>
+              <option value="09:00">09:00</option>
+              <option value="10:00">10:00</option>
+              <option value="11:00">11:00</option>
+            </select>
+          </div>
+          <button className="agendar-button" onClick={handleAgendarMentoria}>
+            Agendar com {selectedMentor}
+          </button>
         </div>
-      )}
-
-      {/* Botão de Agendar */}
-      {selectedMentor && !mentoriaAgendada && (
-        <button className="agendar-button" onClick={handleAgendarMentoria}>
-          Agendar com {selectedMentor}
-        </button>
       )}
     </div>
   );
-}
+};
 
 export default AgendaMentor;
+function setAgressorNome(nome: any) {
+  throw new Error('Function not implemented.');
+}
+
