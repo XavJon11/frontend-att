@@ -17,7 +17,7 @@ header {
  
 }
 .logo {
-  margin-left: 100px; /* Ajuste a margem conforme necessário para posicionar a logo */
+  margin-left: 20px; /* Ajuste a margem conforme necessário para posicionar a logo */
 }
 
 .logo img {
@@ -58,6 +58,29 @@ header {
     color: orange;
    
   }
+/* Media query para dispositivos móveis */
+/* Media query para dispositivos móveis */
+@media screen and (max-width: 480px) {
+  .header-container {
+    padding: 5px 10px;
+    justify-content: flex-start; /* Alinha os itens à esquerda */
+  }
+  
+  .menu ul {
+    flex-direction: row; /* Altera a direção do flex para linha */
+    justify-content: flex-end; /* Move os itens para a direita */
+  }
+  
+  .menu ul li {
+    margin: 0 10px; /* Adiciona margem horizontal entre os itens */
+    font-size: 16px;
+  }
+
+  .logo {
+    margin-right: auto; /* Move a logo para o canto esquerdo */
+  }
+}
+
 
   @media screen and (max-width: 768px) {
     .logo img {
@@ -71,6 +94,7 @@ header {
     
     .menu ul li {
       margin-left: 30px; /* ajuste a margem conforme necessário para telas menores */
+      font-size: 20px;
     }
   }
 
@@ -83,6 +107,6 @@ header {
   .menu ul li {
     margin-left: 100px; /* Ajusta a margem dos itens do menu para telas maiores */
     margin-right: 100px;
-    font-size: 25px; /* Ajusta o tamanho da fonte para telas maiores */
+    font-size: 20px; /* Ajusta o tamanho da fonte para telas maiores */
   }
 }

@@ -1,4 +1,4 @@
-/* telaAgendamento.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap');
 
@@ -118,10 +118,67 @@
 
 
   /* Responsividade */
+/* Responsividade para telas menores que 480px */
+@media screen and (max-width: 480px) {
+    .mentor-container h2 {
+        font-size: 24px; /* Reduz o tamanho do título */
+        margin-bottom: 20px; /* Reduz a margem inferior do título */
+        margin-top: 20%; /* Reduz a margem superior do título */
+    }
+
+    .mentor-cards {
+        flex-direction: row; /* Altera a direção dos cards para horizontal */
+        flex-wrap: wrap; /* Permite que os cards quebrem em linhas */
+        justify-content: space-between; /* Distribui os cards uniformemente */
+        gap: 20px; /* Espaço entre os cards */
+    }
+
+    .mentor-card {
+        width: calc(50% - 20px); /* Define a largura dos cards para ocupar toda a largura disponível, com margens */
+        
+    }
+    
+    .mentor-info {
+        padding: 10px; /* Reduz o preenchimento do conteúdo do card */
+    }
+
+    .mentor-info h3 {
+        font-size: 18px; /* Reduz o tamanho do título do mentor */
+        margin-bottom: 5px; /* Reduz a margem inferior do título */
+    }
+
+    .mentor-info p {
+        font-size: 16px; /* Reduz o tamanho do texto do mentor */
+    }
+
+    .agendar-button {
+        margin-top: 20px; /* Reduz a margem superior do botão de agendar */
+        font-size: 14px; /* Reduz o tamanho do texto do botão de agendar */
+        width: 70%;
+        margin-left: 60px;
+        margin-bottom: 20px;
+    }
+
+    .hour-select {
+        margin-top: 20px; /* Reduz a margem superior do seletor de horário */
+        margin-left: 100px;
+    }
+
+    .hour-select select {
+        width: 50%; /* Define a largura do seletor de horário para ocupar toda a largura disponível */
+    
+    }
+
+}
 
 @media screen and (min-width: 769px) and (max-width: 1444px) {
     .mentor-card {
         width: 350px;
+    }
+
+    .mentor-container h2 {
+        margin-bottom: 100px;
+        margin-top: 400px;
     }
 }
 

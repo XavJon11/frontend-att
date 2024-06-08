@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap');
@@ -136,6 +135,50 @@ body {
 }
 
 /* Atualização para responsividade */
+/* Media query para dispositivos móveis */
+@media screen and (max-width: 480px) {
+  .container {
+    margin-top: 100px;
+    padding: 10px; /* Reduz o padding para dispositivos móveis */
+  }
+
+  .texto1, .imagem, .secao-inferior, .conteudo-textual, .botoes, .imagens {
+    width: 100%; /* Define a largura total para todos os elementos */
+    margin: 0; /* Remove margens para ocupar todo o espaço disponível */
+    padding: 10px; /* Reduz o padding para dispositivos móveis */
+    text-align: center; /* Centraliza o conteúdo */
+  }
+
+  .texto1 h1, .secao-inferior h1, .secao-inferior p, .conteudo-textual h2, .conteudo-textual p, .texto-meio p {
+    font-size: 18px; /* Reduz o tamanho da fonte para dispositivos móveis */
+  }
+
+  .botaoMain {
+    margin-left: 800px; /* Redefine a margem esquerda para que os botões se alinhem lado a lado */
+  }
+
+  .botoes {
+    flex-direction: line; /* Muda a direção dos botões para vertical */
+    align-items: center; /* Centraliza os botões */
+  }
+
+  .tituloM {
+    margin-top: 20px; /* Ajusta a margem superior para dispositivos móveis */
+  }
+
+  .bloco {
+    margin: 20px auto; /* Centraliza os blocos */
+  }
+
+  .bloco img {
+    width: 80px; /* Reduz o tamanho das imagens */
+  }
+
+  .bloco p {
+    font-size: 14px; /* Reduz o tamanho da fonte */
+    margin-top: 10px; /* Ajusta a margem superior */
+  }
+}
 
 @media only screen and (max-width: 768px) {
   .container {
@@ -161,6 +204,7 @@ body {
   .botaoMain {
     padding: 10px 30px;
     font-size: 14px;
+    margin-right: 790px;
   }
   
   .bloco {
@@ -189,7 +233,7 @@ body {
     margin-left: 140px;
   }
   .botoes {
-    margin-left: 400px;
+    margin-left: 300px;
     padding: 20px 20px;
     font-size: 16px;
   }
@@ -215,3 +259,4 @@ body {
     margin-left: 200px;
   }
 }
+
