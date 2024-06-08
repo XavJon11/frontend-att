@@ -13,8 +13,8 @@ interface Mentoria {
 
 const InstituicaoPage: React.FC = () => {
   const [mentorias, setMentorias] = useState<Mentoria[]>([]);
-  const [instituicaoNome, setInstituicaoNome] = useState('UNINASSAU Graças');
-  const [mensagem, setMensagem] = useState('Bem-vindo à nossa plataforma de mentorias!');
+  const [instituicaoNome] = useState('UNINASSAU Graças');
+  const [mensagem] = useState('Bem-vindo à nossa plataforma de mentorias!');
 
   useEffect(() => {
     const fetchMentorias = async () => {

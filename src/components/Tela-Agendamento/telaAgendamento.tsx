@@ -113,8 +113,4 @@ const AgendaMentor: React.FC = () => {
   );
 };
 
-export default AgendaMentor;
-function setAgressorNome(nome: any) {
-  throw new Error('Function not implemented.');
-}
 
