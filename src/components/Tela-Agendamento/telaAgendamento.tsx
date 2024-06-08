@@ -113,4 +113,4 @@ const AgendaMentor: React.FC = () => {
   );
 };
 
-
+export default AgendaMentor;
