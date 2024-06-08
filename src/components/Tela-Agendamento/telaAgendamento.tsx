@@ -33,7 +33,7 @@ const AgendaMentor: React.FC = () => {
 
   const handleAgendarMentoria = async () => {
     try {
-      const response = await fetch('rabackend-production-c802.up.railway.app/mentoria/agendar', {
+      const response = await fetch('http://rabackend-production-c802.up.railway.app/mentoria/agendar', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
