@@ -123,6 +123,11 @@
     .mentor-card {
         width: 350px;
     }
+
+    .mentor-container h2 {
+        margin-bottom: 100px;
+        margin-top: 400px;
+    }
 }
 
 @media screen and (min-width: 1445px) {

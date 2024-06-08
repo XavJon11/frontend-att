@@ -62,7 +62,7 @@ const AnamneseForm: React.FC = () => {
 
     if (formIsValid) {
 
-      fetch('http://localhost:8080/agressor/cadastro', {
+      fetch('rabackend-production-0e39.up.railway.app/agressor/cadastro', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

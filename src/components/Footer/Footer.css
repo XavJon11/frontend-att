@@ -29,6 +29,7 @@ footer {
   footer {
     font-size: 16px; /* Ajusta o tamanho da fonte para monitores de 1444px */
     padding: 20px 0; /* Ajusta o padding */
+    margin-top: 350px;
   }
 }
   

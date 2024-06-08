@@ -71,6 +71,7 @@ header {
     
     .menu ul li {
       margin-left: 30px; /* ajuste a margem conforme necessário para telas menores */
+      font-size: 20px;
     }
   }
 
@@ -83,6 +84,6 @@ header {
   .menu ul li {
     margin-left: 100px; /* Ajusta a margem dos itens do menu para telas maiores */
     margin-right: 100px;
-    font-size: 25px; /* Ajusta o tamanho da fonte para telas maiores */
+    font-size: 20px; /* Ajusta o tamanho da fonte para telas maiores */
   }
 }
