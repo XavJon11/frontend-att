@@ -6,8 +6,7 @@ import InstituicaoPage from '../../components/TelaIES/TelaIES';
 
 const IESPage: React.FC = () => {
   return (
-    <div className="home-page">
-
+    <div>
       <InstituicaoPage />
       <Footer />
     </div>

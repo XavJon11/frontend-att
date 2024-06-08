@@ -93,4 +93,6 @@
   background-color: rgb(255, 0, 0);
 }
 
-
+.content-wrapper {
+  min-height: calc(100vh - 100px);
+}

@@ -2,12 +2,12 @@ footer {
     background-color: #00356d;
     color: white;
     text-align: center;
-    padding: 20px 0;
+    padding: 10px 0;
     bottom: 0;
     width: 100%;
-    margin-top: auto; 
-    position: fixed;
   }
+
+  
 
  /* Media query para telas menores */
 @media screen and (max-width: 768px) {

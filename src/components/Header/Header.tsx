@@ -27,6 +27,7 @@ const Header: React.FC = () => {
           <ul>
             <li><Link to="/" className='link' onClick={scrollToTop}>Início</Link></li>
             <li><Link to="/mentor" className='link'>Mentores</Link></li>
+            <li><Link to="/login" className='link'>Fazer Login</Link></li>
           </ul>
         </nav>
       </div>
