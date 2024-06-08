@@ -12,7 +12,7 @@ const TelaLogin: React.FC = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch('http://rabackend-production-c802.up.railway.app/login', {
+      const response = await fetch('https://rabackend-production-c802.up.railway.app/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

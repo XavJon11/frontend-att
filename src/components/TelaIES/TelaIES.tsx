@@ -19,7 +19,7 @@ const InstituicaoPage: React.FC = () => {
   useEffect(() => {
     const fetchMentorias = async () => {
       try {
-        const response = await fetch('http://rabackend-production-c802.up.railway.app/mentoria/agenda');
+        const response = await fetch('https://rabackend-production-c802.up.railway.app/mentoria/agenda');
         if (response.ok) {
           const data = await response.json();
           setMentorias(data);
