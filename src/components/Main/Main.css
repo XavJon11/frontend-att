@@ -219,6 +219,37 @@ body {
   }
 }
 
+/* Media query para dispositivos entre 481px e 768px */
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .texto1, .imagem, .conteudo-textual {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .botoes {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .botaoMain {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+
+  .bloco {
+    margin: 10px;
+  }
+
+  .bloco p {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+}
+
 /* Atualização para tela 1444px */
 @media only screen and (min-width: 769px) and (max-width: 1444px) {
   .container {

@@ -10,9 +10,9 @@ footer {
 
 /* Media query para telas menores */
 @media screen and (max-width: 768px) {
-footer {
-  font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
-}
+  footer {
+    font-size: 14px;
+  }
 }
 
 /* Media query para tela de 1920px */
