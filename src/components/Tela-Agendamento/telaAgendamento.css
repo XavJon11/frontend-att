@@ -1,8 +1,8 @@
 /* telaAgendamento.css */
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto+Slab:wght@100..900&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&display=swap');
 .mentor-container {
     display: flex;
     flex-direction: column;
@@ -62,8 +62,8 @@
 .mentor-info p {
     font-size: 18px;
     line-height: 1.5;
-    color: #000000;
-    font-family: 'Roboto Slab', serif;
+    color: #1d1202;
+    font-family: "DM Serif Text", serif;
 }
 
 .agendar-button {
@@ -118,57 +118,64 @@
 
 
   /* Responsividade */
-/* Responsividade para telas menores que 480px */
-@media screen and (max-width: 480px) {
+  @media screen and (max-width: 390px) {
     .mentor-container h2 {
-        font-size: 24px; /* Reduz o tamanho do título */
-        margin-bottom: 20px; /* Reduz a margem inferior do título */
-        margin-top: 20%; /* Reduz a margem superior do título */
+        font-size: 20px; /* Reduzindo o tamanho da fonte */
+        margin-top: 10px;
     }
 
     .mentor-cards {
-        flex-direction: row; /* Altera a direção dos cards para horizontal */
-        flex-wrap: wrap; /* Permite que os cards quebrem em linhas */
-        justify-content: space-between; /* Distribui os cards uniformemente */
-        gap: 20px; /* Espaço entre os cards */
+        margin-left: 5px; /* Reduzindo a margem */
+        margin-right: 5px; /* Reduzindo a margem */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 15px; /* Ajustando o espaço entre os cards */
     }
 
     .mentor-card {
-        width: calc(50% - 20px); /* Define a largura dos cards para ocupar toda a largura disponível, com margens */
-        
+        width: calc(50% - 10px); /* Ajustando a largura */
+        text-align: center;
+        padding: 5px;
     }
     
-    .mentor-info {
-        padding: 10px; /* Reduz o preenchimento do conteúdo do card */
+    .mentor-card img {
+        width: 100px; /* Reduzindo a largura da imagem */
+        height: 100px; /* Reduzindo a altura da imagem */
+        object-fit: cover;
     }
 
     .mentor-info h3 {
-        font-size: 18px; /* Reduz o tamanho do título do mentor */
-        margin-bottom: 5px; /* Reduz a margem inferior do título */
+        font-size: 15px; /* Reduzindo o tamanho da fonte */
+        margin-bottom: 5px;
     }
 
     .mentor-info p {
-        font-size: 16px; /* Reduz o tamanho do texto do mentor */
+        font-size: 10px; /* Reduzindo o tamanho da fonte */
+
     }
 
     .agendar-button {
-        margin-top: 20px; /* Reduz a margem superior do botão de agendar */
-        font-size: 14px; /* Reduz o tamanho do texto do botão de agendar */
-        width: 70%;
-        margin-left: 60px;
-        margin-bottom: 20px;
+        margin-top: 15px; /* Ajustando a margem superior */
+        font-size: 10px; /* Reduzindo o tamanho da fonte */
+        width: 60%; /* Ajustando a largura */
+        margin-left: auto; /* Centralizando o botão */
+        margin-right: auto; /* Centralizando o botão */
+        margin-bottom: 40px; /* Ajustando a margem inferior */
     }
 
     .hour-select {
-        margin-top: 20px; /* Reduz a margem superior do seletor de horário */
-        margin-left: 100px;
+        margin-top: 10px; /* Ajustando a margem superior */
+        margin-left: auto; /* Centralizando o select */
+        margin-right: auto; /* Centralizando o select */
+        width: 60%; /* Ajustando a largura */
+        font-size: 13px;
     }
 
     .hour-select select {
-        width: 50%; /* Define a largura do seletor de horário para ocupar toda a largura disponível */
-    
+        width: 100%; /* Ajustando a largura do select */
     }
-
 }
 
 @media screen and (min-width: 769px) and (max-width: 1444px) {

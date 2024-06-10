@@ -138,7 +138,7 @@ body {
 /* Media query para dispositivos móveis */
 @media screen and (max-width: 480px) {
   .container {
-    margin-top: 100px;
+    margin-top: 60px;
     padding: 10px; /* Reduz o padding para dispositivos móveis */
   }
 
@@ -162,9 +162,6 @@ body {
     align-items: center; /* Centraliza os botões */
   }
 
-  .tituloM {
-    margin-top: 20px; /* Ajusta a margem superior para dispositivos móveis */
-  }
 
   .bloco {
     margin: 20px auto; /* Centraliza os blocos */

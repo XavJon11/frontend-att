@@ -47,7 +47,7 @@ const AgendaMentor: React.FC = () => {
       });
 
       if (response.ok) {
-        alert(`Sua mentoria com ${selectedMentor} foi agendada com sucesso!`);
+        alert(`Sua mentoria com ${selectedMentor} será verificada pela IES!`);
         setSelectedMentor(null);
         setMentoriaAgendada(true);
       } else {

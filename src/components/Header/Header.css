@@ -98,29 +98,35 @@ header {
 
 
 /* Media query para dispositivos móveis */
+/* Media query para dispositivos móveis */
 @media screen and (max-width: 480px) {
   .header-container {
-    flex-direction: column;
     align-items: flex-start;
-    padding: 10px;
   }
 
   .logo img {
-    width: 80px;
+    width: 120px;
+    margin-right: 30px; /* Adiciona margem à direita para separar a imagem dos botões */
   }
 
-  .menu ul {
-    flex-direction: column;
-    align-items: flex-start;
+  .menu {
+    display: flex;
+    align-items: center; /* Alinha os itens verticalmente */
     width: 100%;
   }
 
+  .menu ul {
+    flex: 1; /* Faz com que a lista ocupe todo o espaço restante */
+    display: flex;
+    justify-content: flex-end; /* Alinha os itens à direita */
+    margin-left: 10px; /* Adiciona margem à esquerda para separar os botões da imagem */
+  }
+
   .menu ul li {
-    margin: 5px 0;
+    margin: 5px; /* Margem uniforme para os itens da lista */
     font-size: 20px;
   }
 }
-
 /* Media query para dispositivos tablets */
 @media screen and (max-width: 768px) {
   .logo img {
