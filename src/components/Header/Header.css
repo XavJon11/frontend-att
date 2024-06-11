@@ -99,13 +99,14 @@ header {
 
 /* Media query para dispositivos móveis */
 /* Media query para dispositivos móveis */
-@media screen and (max-width: 480px) {
+@media screen and  (max-width: 390px), screen and (max-width: 414px) {
   .header-container {
     align-items: flex-start;
   }
 
   .logo img {
     width: 120px;
+    height: auto;
     margin-right: 30px; /* Adiciona margem à direita para separar a imagem dos botões */
   }
 

@@ -62,8 +62,8 @@
 .mentor-info p {
     font-size: 18px;
     line-height: 1.5;
-    color: #1d1202;
-    font-family: "DM Serif Text", serif;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .agendar-button {
@@ -118,10 +118,10 @@
 
 
   /* Responsividade */
-  @media screen and (max-width: 390px) {
+  @media screen and (max-width: 390px), screen and (max-width: 414px) {
     .mentor-container h2 {
         font-size: 20px; /* Reduzindo o tamanho da fonte */
-        margin-top: 10px;
+        margin-top: 40px;
     }
 
     .mentor-cards {
@@ -138,6 +138,9 @@
         width: calc(50% - 10px); /* Ajustando a largura */
         text-align: center;
         padding: 5px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     
     .mentor-card img {
@@ -153,7 +156,6 @@
 
     .mentor-info p {
         font-size: 10px; /* Reduzindo o tamanho da fonte */
-
     }
 
     .agendar-button {
@@ -162,7 +164,9 @@
         width: 60%; /* Ajustando a largura */
         margin-left: auto; /* Centralizando o botão */
         margin-right: auto; /* Centralizando o botão */
-        margin-bottom: 40px; /* Ajustando a margem inferior */
+        margin-bottom: 20px; /* Ajustando a margem inferior */
+        position: relative; /* Garanta que o botão permaneça no fluxo do documento */
+        z-index: 10; /* Aumentando a prioridade do botão em relação a outros elementos */
     }
 
     .hour-select {
@@ -175,6 +179,11 @@
 
     .hour-select select {
         width: 100%; /* Ajustando a largura do select */
+    }
+
+    .mentor-container {
+        overflow-y: auto; /* Permite a rolagem vertical se o conteúdo for maior que a tela */
+        max-height: 100vh; /* Define a altura máxima para o contêiner */
     }
 }
 
