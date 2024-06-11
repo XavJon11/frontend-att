@@ -14,7 +14,6 @@ const TelaLogin: React.FC = () => {
     try {
       const response = await fetch('https://rabackend-production-0e39.up.railway.app/login', {
         method: 'POST',
-        mode: 'no-cors', // Modo no-cors
         headers: {
           'Content-Type': 'application/json',
         },
