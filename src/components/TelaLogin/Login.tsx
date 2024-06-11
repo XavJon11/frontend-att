@@ -41,18 +41,25 @@ const TelaLogin: React.FC = () => {
         <img src={require('../../assets/imgs/logo_ra1.png')} alt="Logo" />
         <h1 className="h1Cadastro"> Login </h1>
         <form onSubmit={handleLogin}>
-          <input
-            type="text"
-            placeholder="CNPJ"
-            value={cnpj}
-            onChange={(e) => setCnpj(e.target.value)}
-          />
+          <label>
+            CNPJ:
+            <input
+              type="text"
+              placeholder="CNPJ"
+              value={cnpj}
+              onChange={(e) => setCnpj(e.target.value)}
+            />
+          </label>
+          
+          <label>
+          Senha:
           <input
             type="password"
             placeholder="Senha"
             value={senha}
             onChange={(e) => setSenha(e.target.value)}
           />
+          </label>
           {error && <div className="error">{error}</div>}
           <button type="submit" className="BLogin">Fazer Login</button>
         </form>
